@@ -22,17 +22,11 @@ public class Validador {
     
 //Hipotetico caso en la que los indices de cols de las filas(row1 y row2) sean iguales:
     public boolean filasIguales(){
-        int[] indices1 = this.getColumnsIndexes1();
-        int[] indices2 = this.getColumnsIndexes1();
-        boolean auxBoolean = false;
-        int casoIguales = 0;
-        int k;
-        for (k = 0; k < this.getMaxCaso();) //validamos hipotetico caso matriz row1 = matriz row2;
-            if (indices1[k] == indices2[k])
-                casoIguales++;
-        
-        auxBoolean = casoIguales == this.getMaxCaso();
-        return auxBoolean;
+        int casosIguales = 0;
+        for (int k = 0; k < this.getMaxCaso();) //validamos hipotetico caso matriz row1 = matriz row2;
+            if (this.getColumnsIndexes1()[k] == this.getColumnsIndexes2()[k])
+                casosIguales++;
+        return casosIguales == this.getMaxCaso();
     }
     
 }
