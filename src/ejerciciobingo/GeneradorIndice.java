@@ -1,8 +1,9 @@
 package ejerciciobingo;
+
 import PaqueteLectura.GeneradorAleatorio;
 
 public class GeneradorIndice {
-    private int cantCols;
+    private final int cantCols;
     
     public GeneradorIndice(int cantCols){
         this.cantCols = cantCols;

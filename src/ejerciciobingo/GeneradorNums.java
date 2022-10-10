@@ -4,9 +4,9 @@ import PaqueteLectura.GeneradorAleatorio;
 
 public class GeneradorNums {
     
-    private int cantFilas;
-    private int cantCols;
-    private int[][] indices;
+    private final int cantFilas;
+    private final int cantCols;
+    private final int[][] indices;
 
     public GeneradorNums(int cantFilas, int cantCols, int[][] indices) {
         this.cantFilas = cantFilas;

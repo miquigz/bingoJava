@@ -15,7 +15,6 @@ public class EjercicioBingo {
         int [][] columnasRellenar = new int[rows][5]; //3 filas, 5 indices de cols(max por fila 5)
         for (int i = 0; i < rows; i++){
             columnasRellenar[i] = generador.generarIndices(); //asigno array generado de indices
-            
             //Si row 1 y 2 estan llenadas:
             if (i == 1){
                 Validador vali = new Validador(5, columnasRellenar[0], columnasRellenar[1]);
@@ -27,13 +26,23 @@ public class EjercicioBingo {
                         iguales = vali.filasIguales();
                     }
             }
-        }
-        
-        //SI termine el for, entonces tengo los indices:
+        }//SI termine el for, entonces tengo los indices:
         GeneradorNums genNums = new GeneradorNums(rows,cols, columnasRellenar);
-        int [][] carton = new int[rows][cols]; //carton de bingo 3 filas, 9 col
+        int [][] carton; //carton de bingo 3 filas, 9 col
         carton  = genNums.generarNumeros();
         
-    }
-    
+        //Imprimo el carton de bingo:
+        
+        System.out.println("________________________");
+        for(int i = 0; i < rows; i++){
+            for (int j = 0; j < cols; j++){
+                    if (j == 0)
+                        System.out.print("|" + "0" + carton[i][j]);
+                    else
+                        System.out.print("|" + carton[i][j]);
+                }
+        }
+            System.out.println();
+    }    
 }
+    
